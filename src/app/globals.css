@@ -2,20 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url(../fonts/stylesheet.css);
 
 body {
   background: rgba(24, 23, 23, 1);
 }
 
 html,
-body,
-.font-sans {
+body {
   overflow: scroll;
   overflow-x: hidden;
-  font-family: "Space Grotesk";
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: "Starnight";
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -23,8 +20,8 @@ body::-webkit-scrollbar {
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .name {
+    @apply font-['Starnight'];
   }
 }

@@ -29,13 +29,15 @@ function VideoSection() {
       <div className=" fixed z-[55] [&>*]:text-white  w-full flex items-start justify-between px-12 py-6  ">
         <Link
           href={""}
-          className={`[transition:opacity_0.4s_ease]  ${
+          className={`[transition:opacity_0.4s_ease] text-[2rem]  ${
             scrollOpacity >= 0.1 ? "opacity-0" : "opacity-100"
           }     `}
         >
           M Usman Noor
         </Link>
-        <Link href={""}>About</Link>
+        <Link href={""} className="text-[2rem]  ">
+          About
+        </Link>
       </div>
       <main className="relative min-h-[900px]  ">
         <div
@@ -63,8 +65,8 @@ function VideoSection() {
               <div className="overlay" />
             </div>
           </div>
-          <div className=" fixed  text-4xl text-white top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]  ">
-            M Usman Noor y
+          <div className="name fixed  text-[8rem]  text-white top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]  ">
+            M Usman Noor
           </div>
         </div>
       </main>
