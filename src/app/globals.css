@@ -12,7 +12,7 @@ html,
 body {
   overflow: scroll;
   overflow-x: hidden;
-  font-family: "Starnight";
+  font-family: "Roboto";
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 @layer components {
-  .name {
+  .Starnight {
     @apply font-['Starnight'];
   }
 }

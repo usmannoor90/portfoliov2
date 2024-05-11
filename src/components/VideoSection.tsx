@@ -26,18 +26,35 @@ function VideoSection() {
 
   return (
     <>
-      <div className=" fixed z-[55] [&>*]:text-white  w-full flex items-start justify-between px-12 py-6  ">
+      <div
+        className={`fixed z-[55] w-full flex items-start justify-between px-12 py-6  ${
+          scrollOpacity >= 0.1
+            ? "bg-[rgba(24,23,23,0)]"
+            : "bg-[rgba(24,23,23,1)] shadow-lg "
+        }     `}
+      >
         <Link
           href={""}
-          className={`[transition:opacity_0.4s_ease] text-[2rem]  ${
+          className={`[transition:opacity_0.4s_ease] Starnight text-[2rem] text-[#D3D3D3]  ${
             scrollOpacity >= 0.1 ? "opacity-0" : "opacity-100"
           }     `}
         >
           M Usman Noor
         </Link>
-        <Link href={""} className="text-[2rem]  ">
-          About
-        </Link>
+        <div className=" flex items-center justify-center gap-10  ">
+          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+            About
+          </Link>
+          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+            Work
+          </Link>
+          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+            Projects
+          </Link>
+          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+            Contact
+          </Link>
+        </div>
       </div>
       <main className="relative min-h-[900px]  ">
         <div
@@ -65,7 +82,7 @@ function VideoSection() {
               <div className="overlay" />
             </div>
           </div>
-          <div className="name fixed  text-[8rem]  text-white top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]  ">
+          <div className="name Starnight text-[#D3D3D3] fixed  text-[8rem]   top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]  ">
             M Usman Noor
           </div>
         </div>
