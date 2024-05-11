@@ -20,6 +20,10 @@ body::-webkit-scrollbar {
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
+* {
+  cursor: none !important;
+}
+
 @layer components {
   .Starnight {
     @apply font-['Starnight'];

@@ -1,5 +1,7 @@
 import React from "react";
-import { BsFront } from "react-icons/bs";
+import { BsCloudFog } from "react-icons/bs";
+import { TbCloudComputing } from "react-icons/tb";
+import { VscTerminalPowershell } from "react-icons/vsc";
 
 function About() {
   return (
@@ -24,8 +26,8 @@ function About() {
       <section className="  mt-[-10rem]  px-4 ">
         <div className=" bg-[rgba(24,23,23,1)] grid lg:grid-cols-2 max-w-[1000px] gap-8 border-[1px] border-solid border-[#d3d3d391] p-6 mx-auto rounded-2xl [&>*]:text-[#d3d3d3] shadow-2xl  ">
           <div className="flex flex-col py-6 px-6 gap-4 [&>*]:text-center ">
-            <div className=" mx-auto rounded-full bg-[#d3d3d380] p-6   ">
-              <BsFront color="rgba(24,23,23,1)" size={26} />
+            <div className=" mx-auto rounded-full bg-[#d3d3d380] p-4  ">
+              <VscTerminalPowershell color="rgba(24,23,23,1)" size={40} />
             </div>
             <h1 className=" text-[1.5rem] font-semibold  ">
               My Development Stack
@@ -65,8 +67,8 @@ function About() {
             </div>
           </div>
           <div className="flex flex-col py-6 px-6 gap-4 [&>*]:text-center ">
-            <div className=" mx-auto rounded-full bg-[#d3d3d380] p-6   ">
-              <BsFront color="rgba(24,23,23,1)" size={26} />
+            <div className=" mx-auto rounded-full bg-[#d3d3d380] p-4   ">
+              <TbCloudComputing color="rgba(24,23,23,1)" size={40} />
             </div>
             <h1 className=" text-[1.5rem] font-semibold  ">Cloud Developer</h1>
             <p>I like to see my projects served to audience.</p>

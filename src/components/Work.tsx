@@ -18,7 +18,9 @@ import { AiFillApi, AiTwotoneApi } from "react-icons/ai";
 function Work() {
   return (
     <div className=" mt-[8rem] grid grid-cols-1 max-w-[1200px] mx-auto w-full relative  ">
-      <h1 className="text-left  text-4xl font-bold  ">Work Experience:</h1>
+      <h1 className="text-left  text-6xl font-bold text-[#d3d3d3]   ">
+        Work Experience:
+      </h1>
       <div className=" md:pt-[5rem] pt-[3rem] pb-[8rem] grid md:grid-cols-2 max-w-[1200px] gap-12 mx-auto w-full h-full ">
         {/* for small screen */}
         <div className=" md:hidden block bg-black p-6 rounded-xl  ">
