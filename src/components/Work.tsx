@@ -17,11 +17,11 @@ import { AiFillApi, AiTwotoneApi } from "react-icons/ai";
 
 function Work() {
   return (
-    <div className=" mt-[8rem] grid grid-cols-1 max-w-[1200px] mx-auto w-full relative  ">
-      <h1 className="text-left  text-6xl font-bold text-[#d3d3d3]   ">
+    <div className=" sm:mt-[8rem] mt-[4rem] grid grid-cols-1 px-4 max-w-[1200px] mx-auto w-full relative  ">
+      <h1 className="text-left  md:text-6xl text-2xl font-bold text-[#d3d3d3]   ">
         Work Experience:
       </h1>
-      <div className=" md:pt-[5rem] pt-[3rem] pb-[8rem] grid md:grid-cols-2 max-w-[1200px] gap-12 mx-auto w-full h-full ">
+      <div className=" md:pt-[5rem] pt-[2rem] sm:pb-[8rem] pb-[4rem] grid md:grid-cols-2 max-w-[1200px] gap-12 mx-auto w-full h-full ">
         {/* for small screen */}
         <div className=" md:hidden block bg-black p-6 rounded-xl  ">
           <h3 className="  text-[14px]  text-[#cac0b3c0]">2022-Present</h3>
@@ -100,8 +100,8 @@ function Work() {
 
         <div className=" w-full relative md:block hidden h-full ">
           <PinContainer
-            title="/ui.aceternity.com"
-            href="https://twitter.com/mannupaaji"
+            title="Rnadome url"
+            href="https://www.linkedin.com/in/muhammadusman1122/"
             className="p-4 xl:!w-[560px] lg:!w-[460px] h-full "
           >
             <div className=" xl:!w-[540px] lg:!w-[440px] h-full">
@@ -154,8 +154,8 @@ function Work() {
         </div>
         <div className=" w-full relative md:block hidden h-full ">
           <PinContainer
-            title="/ui.aceternity.com"
-            href="https://twitter.com/mannupaaji"
+            title="https://www.coinbitsolutions.com/"
+            href="https://www.coinbitsolutions.com/"
             className="p-4 xl:!w-[560px] lg:!w-[460px] h-full  "
           >
             <div className=" xl:!w-[540px] lg:!w-[440px] h-full  ">

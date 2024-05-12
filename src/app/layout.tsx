@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Head from "next/head";
 import CustomCircle from "../components/CustomCircle";
-
-export const metadata: Metadata = {
-  title: "M Usman Noor",
-};
+import CustomHead from "../components/CustomHead";
 
 export default function RootLayout({
   children,
@@ -17,6 +14,7 @@ export default function RootLayout({
       <body>
         {children}
         <CustomCircle />
+        <CustomHead />
       </body>
     </html>
   );

@@ -9,13 +9,15 @@ body {
 }
 
 html,
-body {
+body,
+.nosrollbar {
   overflow: scroll;
   overflow-x: hidden;
   font-family: "Roboto";
 }
 html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.nosrollbar::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }

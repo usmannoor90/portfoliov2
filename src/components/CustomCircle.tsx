@@ -8,10 +8,11 @@ function CustomCircle() {
       <AnimatedCursor
         innerSize={6}
         outerSize={35}
-        innerScale={1.5}
-        outerScale={2}
+        innerScale={4}
+        outerScale={0}
         outerAlpha={0}
         // hasBlendMode={true}
+        trailingSpeed={2}
         innerStyle={{
           backgroundColor: "#d3d3d3",
         }}
