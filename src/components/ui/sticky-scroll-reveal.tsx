@@ -57,58 +57,60 @@ export const StickyScroll = ({
       className="h-[30rem] overflow-y-auto flex max-w-[1000px] relative space-x-10 mx-auto  nosrollbar "
       ref={ref}
     >
-      <div className=" relative px-4 max-w-lg  ">
-        {contents.map((item, index) => (
-          <div key={item.title + index} className="my-24">
-            <div className=" md:bg-transparent bg-red-500 rounded-xl p-5  ">
-              <motion.h2
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="text-[rgb(255,_255,_255)] font-extrabold text-lg"
-              >
-                <Link
-                  className="flex gap-1 group   "
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
+      <div className=" relative px-4  ">
+        <div className=" max-w-lg   ">
+          {contents.map((item, index) => (
+            <div key={item.title + index} className="my-24">
+              <div className=" md:bg-transparent bg-red-500 rounded-xl p-5  ">
+                <motion.h2
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: activeCard === index ? 1 : 0.3,
+                  }}
+                  className="text-[rgb(255,_255,_255)] font-extrabold text-lg"
                 >
-                  <span className="font-bold capitalize"> {item.title}</span>
-                  <MdOutlineArrowOutward className=" group-hover:rotate-45 translate-y-1 group-hover:translate-x-1  transition-[all_0.1s] ease-linear  " />
-                </Link>
-              </motion.h2>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="!text-[rgb(213,_213,_213)] mt-2"
-              >
-                {item.description}
-              </motion.p>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="flex flex-wrap gap-2  !text-[rgb(213,_213,_213)]  [&>span]:bg-[rgb(105,_104,_105)] [&>span]:px-[10px] [&>span]:py-[4px] [&>span]:rounded-[50px] [&>span]:capitalize [&>span]:text-[11px]  [&>span]:text-[rgb(255,_255,_255)] [&>span]:font-medium mt-4"
-              >
-                {item.tags?.map((value, ind) => (
-                  <span key={ind} className="block ">
-                    {value}
-                  </span>
-                ))}
-              </motion.p>
+                  <Link
+                    className="flex gap-1 group   "
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="font-bold capitalize"> {item.title}</span>
+                    <MdOutlineArrowOutward className=" group-hover:rotate-45 translate-y-1 group-hover:translate-x-1  transition-[all_0.1s] ease-linear  " />
+                  </Link>
+                </motion.h2>
+                <motion.p
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: activeCard === index ? 1 : 0.3,
+                  }}
+                  className="!text-[rgb(213,_213,_213)] mt-2"
+                >
+                  {item.description}
+                </motion.p>
+                <motion.p
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: activeCard === index ? 1 : 0.3,
+                  }}
+                  className="flex flex-wrap gap-2  !text-[rgb(213,_213,_213)]  [&>span]:bg-[rgb(105,_104,_105)] [&>span]:px-[10px] [&>span]:py-[4px] [&>span]:rounded-[50px] [&>span]:capitalize [&>span]:text-[11px]  [&>span]:text-[rgb(255,_255,_255)] [&>span]:font-medium mt-4"
+                >
+                  {item.tags?.map((value, ind) => (
+                    <span key={ind} className="block ">
+                      {value}
+                    </span>
+                  ))}
+                </motion.p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <div className=" md:h-44 sm:h-30  " />
       </div>
       <motion.div
