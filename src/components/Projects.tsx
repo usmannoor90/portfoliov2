@@ -5,16 +5,41 @@ import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
 function Projects() {
-  const content = [
+  const handleMouseEnter: React.MouseEventHandler<HTMLVideoElement> = (e) => {
+    const vid = e.currentTarget as HTMLVideoElement;
+    if (vid) {
+      vid.muted = true;
+      vid.play();
+    }
+  };
+
+  const handleMouseLeave: React.MouseEventHandler<HTMLVideoElement> = (e) => {
+    const vid = e.currentTarget as HTMLVideoElement;
+    if (vid) {
+      vid.muted = false;
+      vid.currentTime = 0;
+      vid.pause();
+    }
+  };
+
+  const contents = [
     {
       href: "",
-      title: "Collaborative Editing",
-      description:
-        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      title: "Proejct 1",
+      description: "Project 1 description",
       content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-          Collaborative Editing
-        </div>
+        <>
+          <video
+            // width={250}
+            // height={250}
+            className="  w-full h-full object-cover "
+            controls={false}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <source src={"/videos/projectvideos (2).mp4"} type="video/mp4" />
+          </video>
+        </>
       ),
       tags: ["javascript", "typescript"],
     },
@@ -25,15 +50,18 @@ function Projects() {
       description:
         "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
       content: (
-        <div className="h-full w-full  flex items-center justify-center text-white">
-          <Image
-            src="/linear.webp"
-            width={300}
-            height={300}
-            className="h-full w-full object-cover"
-            alt="linear board demo"
-          />
-        </div>
+        <>
+          <video
+            // width={250}
+            // height={250}
+            className="  w-full h-full object-cover "
+            controls={false}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <source src={"/videos/projectvideos (1).mp4"} type="video/mp4" />
+          </video>
+        </>
       ),
       tags: ["javascript", "typescript"],
     },
@@ -44,9 +72,18 @@ function Projects() {
       description:
         "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
       content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-          Version control
-        </div>
+        <>
+          <video
+            // width={250}
+            // height={250}
+            className="  w-full h-full object-cover "
+            controls={false}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <source src={"/videos/projectvideos (3).mp4"} type="video/mp4" />
+          </video>
+        </>
       ),
       tags: ["javascript", "typescript"],
     },
@@ -57,9 +94,18 @@ function Projects() {
       description:
         "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
       content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-          Running out of content
-        </div>
+        <>
+          <video
+            // width={250}
+            // height={250}
+            className="  w-full h-full object-cover "
+            controls={false}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <source src={"/videos/projectvideos (4).mp4"} type="video/mp4" />
+          </video>
+        </>
       ),
       tags: ["javascript", "typescript"],
     },
@@ -71,8 +117,8 @@ function Projects() {
         Projects:
       </h1>
 
-      <div className="md:py-[6rem] py-[1rem]">
-        <StickyScroll content={content} />
+      <div className="md:pt-[6rem] py-[1rem]">
+        <StickyScroll contents={contents} />
       </div>
     </div>
   );

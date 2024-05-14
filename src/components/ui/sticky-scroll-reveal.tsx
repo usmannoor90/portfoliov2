@@ -7,10 +7,10 @@ import Link from "next/link";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 export const StickyScroll = ({
-  content,
+  contents,
   contentClassName,
 }: {
-  content: {
+  contents: {
     title: string;
     description: string;
     content?: React.ReactNode | any;
@@ -27,10 +27,10 @@ export const StickyScroll = ({
     container: ref,
     offset: ["start start", "end start"],
   });
-  const cardLength = content.length;
+  const cardLength = contents.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
+    const cardsBreakpoints = contents.map((_, index) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce(
       (acc, breakpoint, index) => {
         const distance = Math.abs(latest - breakpoint);
@@ -54,73 +54,74 @@ export const StickyScroll = ({
       // animate={{
       //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       // }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md  nosrollbar "
+      className="h-[30rem] overflow-y-auto flex max-w-[1000px] relative space-x-10 mx-auto  nosrollbar "
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 ">
-        <div className="max-w-lg">
-          {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
-              <motion.h2
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="text-[rgb(255,_255,_255)] font-extrabold text-lg"
+      <div className=" relative px-4 max-w-lg  ">
+        {contents.map((item, index) => (
+          <div key={item.title + index} className="my-24">
+            <motion.h2
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: activeCard === index ? 1 : 0.3,
+              }}
+              className="text-[rgb(255,_255,_255)] font-extrabold text-lg"
+            >
+              <Link
+                className="flex gap-1 group   "
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
               >
-                <Link
-                  className="flex gap-1 group   "
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="font-bold capitalize"> {item.title}</span>
-                  <MdOutlineArrowOutward className=" group-hover:rotate-45 translate-y-1 group-hover:translate-x-1  transition-[all_0.1s] ease-linear  " />
-                </Link>
-              </motion.h2>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="!text-[rgb(213,_213,_213)] mt-2"
-              >
-                {item.description}
-              </motion.p>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                className="flex flex-wrap gap-2  !text-[rgb(213,_213,_213)]  [&>span]:bg-[rgb(105,_104,_105)] [&>span]:px-[10px] [&>span]:py-[4px] [&>span]:rounded-[50px] [&>span]:capitalize [&>span]:text-[11px]  [&>span]:text-[rgb(255,_255,_255)] [&>span]:font-medium mt-4"
-              >
-                {item.tags?.map((value, ind) => (
-                  <span key={ind} className="block ">
-                    {value}
-                  </span>
-                ))}
-              </motion.p>
-            </div>
-          ))}
-          <div className=" md:h-40 sm:h-30  " />
-        </div>
+                <span className="font-bold capitalize"> {item.title}</span>
+                <MdOutlineArrowOutward className=" group-hover:rotate-45 translate-y-1 group-hover:translate-x-1  transition-[all_0.1s] ease-linear  " />
+              </Link>
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: activeCard === index ? 1 : 0.3,
+              }}
+              className="!text-[rgb(213,_213,_213)] mt-2"
+            >
+              {item.description}
+            </motion.p>
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: activeCard === index ? 1 : 0.3,
+              }}
+              className="flex flex-wrap gap-2  !text-[rgb(213,_213,_213)]  [&>span]:bg-[rgb(105,_104,_105)] [&>span]:px-[10px] [&>span]:py-[4px] [&>span]:rounded-[50px] [&>span]:capitalize [&>span]:text-[11px]  [&>span]:text-[rgb(255,_255,_255)] [&>span]:font-medium mt-4"
+            >
+              {item.tags?.map((value, ind) => (
+                <span key={ind} className="block ">
+                  {value}
+                </span>
+              ))}
+            </motion.p>
+          </div>
+        ))}
+        <div className=" md:h-44 sm:h-30  " />
       </div>
       <motion.div
-        animate={{
-          background: linearGradients[activeCard % linearGradients.length],
-        }}
+        // animate={{
+        //   background: linearGradients[activeCard % linearGradients.length],
+        // }}
         className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden md:block h-[250px] w-[400px] rounded-lg bg-transparent sticky top-10 overflow-hidden    ",
           contentClassName
         )}
       >
-        {content[activeCard].content ?? null}
+        {contents.map((item, index) => {
+          return <>{index === activeCard && item.content}</>;
+        })}
+        {/* {contents[activeCard].content} */}
       </motion.div>
     </motion.div>
   );
