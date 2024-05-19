@@ -102,7 +102,7 @@ function Work() {
           <PinContainer
             title="Rnadome url"
             href="https://www.linkedin.com/in/muhammadusman1122/"
-            className="p-4 xl:!w-[560px] lg:!w-[460px] h-full "
+            className="p-4 xl:!w-[560px] lg:!w-[460px] h-[200px] "
           >
             <div className=" xl:!w-[540px] lg:!w-[440px] h-full">
               <h3 className="  text-[14px]  text-[#cac0b3c0]">2021-2022</h3>
@@ -111,18 +111,24 @@ function Work() {
                   React Developer
                 </h2>
                 <h2 className=" sm:text-[14px] text-[12px] whitespace-nowrap  text-[#cac0b3c0]  ">
-                  ( CointBitSolutions )
+                  ( TeckNerds Inc. )
                 </h2>
                 <MdOutlineArrowOutward className="group-hover:rotate-45 group-hover:translate-x-2  transition-[all_0.1s] ease-linear  " />
               </div>
-              <p className=" w-full  text-[#CAC0B3]  sm:text-[15px] text-[13px]  ">
-                Successfully developed and deployed several web applications
-                showcasing a deep understanding of user experience and modern
-                design principles. Implemented Redux for state management,
-                enhancing application responsiveness and user engagement.
-                Proficiently integrated RESTful APIs to enable seamless data
-                exchange between front-end and back-end systems.
-              </p>
+              {/* <p className=" w-full  text-[#CAC0B3]  sm:text-[15px] text-[13px]  ">
+                Developed responsive web applications using HTML, CSS,
+                JavaScript, TypeScript and jQuery. Built modular,
+                high-performance user interfaces with React. Converted
+                JavaScript codebases to TypeScript for better maintainability.
+                Designed reusable React components and utilized React hooks and
+                context API. Created responsive layouts using modern CSS
+                techniques and preprocessors. Integrated RESTful APIs for
+                seamless client-server data exchange. Managed code repositories
+                with Git and collaborated using agile methodologies. Conducted
+                performance optimizations and ensured cross-browser
+                compatibility. Stayed updated with front-end development trends
+                and enhanced skills through continuous learning.
+              </p> */}
 
               <div className="flex gap-1 flex-wrap items-center mt-3 [&>span]:bg-[rgb(105,_104,_105)] [&>span]:px-[10px] [&>span]:py-[4px] [&>span]:rounded-[50px] [&>span]:capitalize [&>span]:text-[11px]  [&>span]:text-[rgb(255,_255,_255)] [&>span]:font-medium [&>span]:flex [&>span]:items-center [&>span]:gap-1 [&>span]:flex-nowrap  ">
                 <span className="  ">
@@ -140,7 +146,9 @@ function Work() {
                 <span className="  ">
                   ReactJs <FaReact />
                 </span>
-
+                <span className="   ">
+                  Node.Js/Express.Js <IoLogoJavascript />
+                </span>
                 <span className="   ">
                   restful api <AiFillApi />
                 </span>
@@ -156,7 +164,7 @@ function Work() {
           <PinContainer
             title="https://www.coinbitsolutions.com/"
             href="https://www.coinbitsolutions.com/"
-            className="p-4 xl:!w-[560px] lg:!w-[460px] h-full  "
+            className="p-4 xl:!w-[560px] lg:!w-[460px] h-[200px]  "
           >
             <div className=" xl:!w-[540px] lg:!w-[440px] h-full  ">
               <h3 className="  text-[14px]  text-[#cac0b3c0]">2022-Present</h3>
@@ -169,14 +177,22 @@ function Work() {
                 </h2>
                 <MdOutlineArrowOutward className="group-hover:rotate-45 group-hover:translate-x-2  transition-[all_0.1s] ease-linear  " />
               </div>
-              <p className=" w-full  text-[#CAC0B3]  sm:text-[15px] text-[13px]  ">
-                Successfully developed and deployed several web applications
-                showcasing a deep understanding of user experience and modern
-                design principles. Implemented Redux for state management,
-                enhancing application responsiveness and user engagement.
-                Proficiently integrated RESTful APIs to enable seamless data
-                exchange between front-end and back-end systems.
-              </p>
+              {/* <p className=" w-full  text-[#CAC0B3]  sm:text-[15px] text-[13px]  ">
+                Developed and maintained web applications using React and
+                Next.js. Implemented Redux for state management, enhancing
+                application responsiveness and user engagement. Created and
+                optimized backend services using Node.js and Express.js. Worked
+                with databases including MySQL, MS SQL, PostgreSQL, and MongoDB.
+                Utilized GitHub for version control and collaborated on
+                projects. Implemented and managed CI pipelines using Docker.
+                Deployed and hosted projects on AWS, ensuring scalability and
+                reliability. Integrated RESTful APIs and handled server-side
+                logic. Participated in code reviews, documentation, and agile
+                development processes. Stayed updated with industry trends and
+                continuously enhanced skills. Successfully developed and
+                deployed several web applications showcasing a deep
+                understanding of user experience and modern design principles.
+              </p> */}
 
               <div className="flex gap-1 flex-wrap items-center mt-3   [&>span]:bg-[rgb(105,_104,_105)] [&>span]:px-[10px] [&>span]:py-[4px] [&>span]:rounded-[50px] [&>span]:capitalize [&>span]:text-[11px]  [&>span]:text-[rgb(255,_255,_255)] [&>span]:font-medium [&>span]:flex [&>span]:items-center [&>span]:gap-1 [&>span]:flex-nowrap    ">
                 <span className="  ">

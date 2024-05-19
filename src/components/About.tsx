@@ -7,17 +7,23 @@ function About() {
   return (
     <div>
       <section className=" bg-[#d3d3d380] [&>*]:text-[rgba(24,23,23,1)] pt-[10rem] sm:pb-[20rem] pb-[10rem]    ">
-        <div className="grid grid-cols-1 px-4  max-w-[750px] mx-auto  ">
+        <div className="grid grid-cols-1 px-4  max-w-[1000px] mx-auto  ">
           <div className="flex flex-col justify-center items-center gap-6">
             <h1 className="text-center  text-4xl font-bold  ">
               Hi, I’m Usman. Nice to meet you.
             </h1>
-            <h2 className=" text-center text-xl font-normal ">
-              Since beginning my journey as a freelance designer 12 years ago,
-              I&apos;ve done remote work for agencies, consulted for startups,
-              and collaborated with talented people to create digital products
-              for both business and consumer use. I&apos;m quietly confident,
-              naturally curious, and perpetually working on improving my chops.
+            <h2 className=" text-center text-md font-normal ">
+              Back In 2021, I made the switch from nuts and bolts as a freshly
+              graduated Mechanical Engineer to weaving digital wonders in the
+              realm of web development. My inaugural year with React was all
+              about creating web designs that could make pixels jealous. The
+              sequel brought a new role—designing API implementations and diving
+              into the magic of Next.js. Meanwhile, I traded my mechanical
+              toolbox for Node.js and Express to sculpt robust end-to-end
+              solutions. Oh, and did I mention? My coding adventures now unfold
+              in the intriguing domain of cryptocurrency. Beyond the keyboard,
+              I’m the carpenter who can code and the gym enthusiast who can
+              debug.
             </h2>
           </div>
         </div>
@@ -84,8 +90,8 @@ function About() {
             </p>
             <ul>
               <li>Docker</li>
-              <li>Terraform</li>
-              <li>CI/CD</li>
+              {/* <li>Terraform</li> */}
+              <li>CI Pipeline</li>
               <li>nginx</li>
               <li>AWS</li>
               <li>Git</li>
