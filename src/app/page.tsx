@@ -12,7 +12,7 @@ export default function Home() {
         <div className=" max-w-[1400px] grid grid-cols-1 mx-auto    ">
           <About />
           <Work />
-          <div className="px-4">
+          <div className="px-4 py-[8rem] ">
             <Projects />
           </div>
           <Contact />

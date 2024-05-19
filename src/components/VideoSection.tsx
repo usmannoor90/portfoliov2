@@ -33,6 +33,13 @@ function VideoSection() {
     };
   }, []); // Only run on component mount and unmount
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div
@@ -51,16 +58,37 @@ function VideoSection() {
           M Usman Noor
         </Link>
         <div className="  items-center justify-center gap-10 sm:flex hidden  ">
-          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+          <Link
+            href={"#about"}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("about");
+            }}
+            className="text-[2rem] text-[#D3D3D3] Starnight "
+          >
             About
           </Link>
-          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+          <Link
+            href={"#work"}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("work");
+            }}
+            className="text-[2rem] text-[#D3D3D3] Starnight "
+          >
             Work
           </Link>
           <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
             Projects
           </Link>
-          <Link href={""} className="text-[2rem] text-[#D3D3D3] Starnight ">
+          <Link
+            href={"#contact"}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("contact");
+            }}
+            className="text-[2rem] text-[#D3D3D3] Starnight "
+          >
             Contact
           </Link>
         </div>

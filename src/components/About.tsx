@@ -6,7 +6,10 @@ import { VscTerminalPowershell } from "react-icons/vsc";
 function About() {
   return (
     <div>
-      <section className=" bg-[#d3d3d380] [&>*]:text-[rgba(24,23,23,1)] pt-[10rem] sm:pb-[20rem] pb-[10rem]    ">
+      <section
+        className=" bg-[#d3d3d380] [&>*]:text-[rgba(24,23,23,1)] pt-[10rem] sm:pb-[20rem] pb-[10rem]    "
+        id="about"
+      >
         <div className="grid grid-cols-1 px-4  max-w-[1000px] mx-auto  ">
           <div className="flex flex-col justify-center items-center gap-6">
             <h1 className="text-center  text-4xl font-bold  ">
